@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.TriangleOfNumbers", "08.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.PadawanEquipment", "09.PadawanEquipment\09.PadawanEquipment.csproj", "{33A79AA0-EC3E-446C-80B8-A63A956110F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.RageExpenses", "10.RageExpenses\10.RageExpenses.csproj", "{7A449CAA-7ED2-4204-B667-11BCF5A693FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{33A79AA0-EC3E-446C-80B8-A63A956110F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33A79AA0-EC3E-446C-80B8-A63A956110F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33A79AA0-EC3E-446C-80B8-A63A956110F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A449CAA-7ED2-4204-B667-11BCF5A693FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A449CAA-7ED2-4204-B667-11BCF5A693FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A449CAA-7ED2-4204-B667-11BCF5A693FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A449CAA-7ED2-4204-B667-11BCF5A693FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
