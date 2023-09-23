@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Ages", "01.Ages\01.Ages.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.Division", "02.Division\02.Division.csproj", "{6F9544A2-360A-4799-B83E-F4A8730A0236}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Vacation", "3.Vacation\03.Vacation.csproj", "{451D9479-09BE-44FC-B729-B032FC473AF9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.PrintAndSum", "04.PrintAndSum\04.PrintAndSum.csproj", "{7D6BC47A-8573-47F9-A805-6680CA2FA808}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.Login", "05.Login\05.Login.csproj", "{189115AA-EE0C-40A8-B3D1-3007D7F33636}"
@@ -17,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.StrongNumber", "06.Stron
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.VendingMachine", "07.VendingMachine\07.VendingMachine.csproj", "{43A568BA-284D-448B-9A83-A4A5FF2C00A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.TriangleOfNumbers", "08.TriangleOfNumbers\08.TriangleOfNumbers.csproj", "{2C187607-978B-47D9-B5A3-FC10881158B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.TriangleOfNumbers", "08.TriangleOfNumbers\08.TriangleOfNumbers.csproj", "{2C187607-978B-47D9-B5A3-FC10881158B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.PadawanEquipment", "09.PadawanEquipment\09.PadawanEquipment.csproj", "{33A79AA0-EC3E-446C-80B8-A63A956110F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.PadawanEquipment", "09.PadawanEquipment\09.PadawanEquipment.csproj", "{33A79AA0-EC3E-446C-80B8-A63A956110F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.RageExpenses", "10.RageExpenses\10.RageExpenses.csproj", "{7A449CAA-7ED2-4204-B667-11BCF5A693FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.RageExpenses", "10.RageExpenses\10.RageExpenses.csproj", "{7A449CAA-7ED2-4204-B667-11BCF5A693FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +35,6 @@ Global
 		{6F9544A2-360A-4799-B83E-F4A8730A0236}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F9544A2-360A-4799-B83E-F4A8730A0236}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F9544A2-360A-4799-B83E-F4A8730A0236}.Release|Any CPU.Build.0 = Release|Any CPU
-		{451D9479-09BE-44FC-B729-B032FC473AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{451D9479-09BE-44FC-B729-B032FC473AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{451D9479-09BE-44FC-B729-B032FC473AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{451D9479-09BE-44FC-B729-B032FC473AF9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7D6BC47A-8573-47F9-A805-6680CA2FA808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7D6BC47A-8573-47F9-A805-6680CA2FA808}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D6BC47A-8573-47F9-A805-6680CA2FA808}.Release|Any CPU.ActiveCfg = Release|Any CPU
