@@ -6,6 +6,9 @@ List<int> numbers = Console.ReadLine()
     .Select(int.Parse)
     .ToList();
 
+numbers.Sort();
+numbers.Reverse();
+
 double numbersAvergeValue = numbers.Sum() / numbers.Count;
 
 List<int> numbersGreaterThanTheAvergeValue = new List<int>();
@@ -32,4 +35,3 @@ else
 {
     Console.WriteLine("No");
 }
-
