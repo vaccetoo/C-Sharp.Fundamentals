@@ -6,7 +6,7 @@ List<int> houses = Console.ReadLine()
 
 string command = string.Empty;
 
-int startIndex = 0;
+int lastIndex = 0;
 int currIndex = 0;
 
 
@@ -15,31 +15,31 @@ while ((command = Console.ReadLine()) != "Love!")
     List<string> jumpCommand = command.Split(" ").ToList();
     
     int jumpLength = int.Parse(jumpCommand[1]);
+    currIndex = lastIndex + jumpLength;
 
-    if (startIndex + jumpLength > houses.Count - 1)
+    if (currIndex > houses.Count - 1)
     {
-        startIndex = 0;
-        jumpLength = 0;
+        currIndex = 0;
     }
 
-    if (houses[startIndex + jumpLength] == 0)
+    if (houses[currIndex] == 0)
     {
-        Console.WriteLine($"Place {startIndex + jumpLength} already had Valentine's day.");
+        Console.WriteLine($"Place {currIndex} already had Valentine's day.");
+        lastIndex = currIndex;
         continue;
     }
 
-    houses[startIndex + jumpLength] -= 2;
+    houses[currIndex] -= 2;
 
-    if (houses[startIndex + jumpLength] == 0)
+    if (houses[currIndex] == 0)
     {
-        Console.WriteLine($"Place {startIndex + jumpLength} has Valentine's day.");
+        Console.WriteLine($"Place {currIndex} has Valentine's day.");
     }
 
-    currIndex = startIndex + jumpLength;
-    startIndex = currIndex;
+    lastIndex = currIndex;
 }
 
-Console.WriteLine($"Cupid's last position was {currIndex}.");
+Console.WriteLine($"Cupid's last position was {lastIndex}.");
 
 if (houses.Sum() == 0)
 {
@@ -60,3 +60,4 @@ else
     Console.WriteLine($"Cupid has failed {counter} places.");
 }
   
+    
