@@ -1,4 +1,6 @@
 ﻿
+using System.Text;
+
 string input = Console.ReadLine();  
 
 string command = string.Empty;
@@ -38,14 +40,32 @@ void FlipIndexes(string input, List<string> currCommand)
     // "Flip>>>Upper/Lower>>>{startIndex}>>>{endIndex}":
     // Changes the substring between the given indices (the end index is exclusive) to upper or lower case and then prints the activation key.
 
+    int startIndex = int.Parse(currCommand[2]);
+    int endIndex = int.Parse(currCommand[3]);
+
+    if (startIndex < 0 || startIndex >= input.Length || endIndex <= startIndex || endIndex > input.Length)
+    {
+        Console.WriteLine("Invalid indices for Flip instruction.");
+        return;
+    }
+
+    string substringToChange = input.Substring(startIndex, endIndex - startIndex);
+
     if (currCommand[1] == "Upper")
     {
-        
+        substringToChange = substringToChange.ToUpper();
     }
     else if (currCommand[1] == "Lower")
     {
-        
+        substringToChange = substringToChange.ToLower();
     }
+
+    // Replace the substring in the input with the modified one
+    StringBuilder modifiedInput = new StringBuilder(input);
+    modifiedInput.Remove(startIndex, endIndex - startIndex);
+    modifiedInput.Insert(startIndex, substringToChange);
+
+    Console.WriteLine(modifiedInput);
 }
 
 void DoesInputContainsSubstring(string input, List<string> currCommand)
@@ -62,4 +82,5 @@ void DoesInputContainsSubstring(string input, List<string> currCommand)
         Console.WriteLine("Substring not found!");
     }
 }
+
 
