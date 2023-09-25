@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingList", "ShoppingLis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeartDelivery", "HeartDelivery\HeartDelivery.csproj", "{72AE8852-C827-4862-9812-F3D8F0D3C47D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivationKeys", "ActivationKeys\ActivationKeys.csproj", "{94BD6EC1-80F8-42F4-9CB9-8E17267F2860}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActivationKeys", "ActivationKeys\ActivationKeys.csproj", "{94BD6EC1-80F8-42F4-9CB9-8E17267F2860}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonusScoringSystem", "BonusScoringSystem\BonusScoringSystem.csproj", "{11B22893-2355-4BC1-B0DA-AA0891708B28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{94BD6EC1-80F8-42F4-9CB9-8E17267F2860}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94BD6EC1-80F8-42F4-9CB9-8E17267F2860}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94BD6EC1-80F8-42F4-9CB9-8E17267F2860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11B22893-2355-4BC1-B0DA-AA0891708B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11B22893-2355-4BC1-B0DA-AA0891708B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11B22893-2355-4BC1-B0DA-AA0891708B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11B22893-2355-4BC1-B0DA-AA0891708B28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
