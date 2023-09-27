@@ -1,105 +1,86 @@
 ﻿
 using System.Threading;
 
-string[] dungeonsRooms = Console.ReadLine()
-    .Split("|", StringSplitOptions.RemoveEmptyEntries);
+string[] dungeons = Console.ReadLine()
+    .Split("|");
 
-int initialHealth = 100;
+int health = 100;
 int bitcoins = 0;
 
-for (int i = 0; i < dungeonsRooms.Length; i++)
+int bestRoom = 0;
+
+for (int i = 0; i < dungeons.Length; i++)
 {
-    string[] currCommand = dungeonsRooms[i].Split();
+    string[] command = dungeons[i].Split(" ");
 
-    if (currCommand.First() == "potion")
+    if (command[0] == "potion")
     {
-        initialHealth = AddHealth(currCommand, initialHealth);
+        health = AddHealth(health, int.Parse(command[1]));
     }
-    else if (currCommand.First() == "chest")
+    else if (command[0] == "chest")
     {
-        bitcoins = PrintFoundedBitcoins(currCommand, bitcoins);
+        bitcoins = AddBitcoins(bitcoins, int.Parse(command[1]));
     }
-    else 
+    else // You've met the monster
     {
-        // You have found a monster ...
+        health = MeetTheMonster(health, command[0], int.Parse(command[1]));
 
-        initialHealth = SubtracktMonsterDamage(currCommand, initialHealth);
-
-        if (initialHealth <= 0)
+        if (health <= 0)
         {
+            bestRoom = i + 1;
+
+            Console.WriteLine($"Best room: {bestRoom}");
             break;
         }
     }
 }
 
-if (initialHealth <= 0)
+if (health > 0)
 {
-    int currBitcoins = 0;
-    int mostBitcoins = 0;
-
-    int bestRoom = 0;
-
-    for (int i = 0; i < dungeonsRooms.Length; i++)
-    {
-        if (dungeonsRooms[i].Split()[0] == "chest")
-        {
-            currBitcoins = int.Parse(dungeonsRooms[i].Split()[1]);
-
-            if (currBitcoins > mostBitcoins)
-            {
-                mostBitcoins = currBitcoins;
-                bestRoom = i;
-            }
-        }
-    }
-    Console.WriteLine($"Best room: {bestRoom}");
-}
-else
-{
-    Console.WriteLine("You've made it!");
+    Console.WriteLine($"You've made it!");
     Console.WriteLine($"Bitcoins: {bitcoins}");
-    Console.WriteLine($"Health: {initialHealth}");
+    Console.WriteLine($"Health: {health}");
 }
 
-int SubtracktMonsterDamage(string[] currCommand, int initialHealth)
+int MeetTheMonster(int health, string monsterName, int monsterDmg)
 {
-    if (initialHealth - int.Parse(currCommand[1]) > 0)
-    {
-        initialHealth -= int.Parse(currCommand[1]);
+    health -= monsterDmg;
 
-        Console.WriteLine($"You slayed {currCommand[0]}");
+    if (health > 0)
+    {
+        Console.WriteLine($"You slayed {monsterName}.");
     }
     else
     {
-        initialHealth -= int.Parse(currCommand[1]);
-
-        Console.WriteLine($"You died! Killed by {currCommand[0]}.");
+        Console.WriteLine($"You died! Killed by {monsterName}.");
     }
 
-    return initialHealth;
+    return health;
 }
 
-int PrintFoundedBitcoins(string[] currCommand, int bitcoins)
+int AddBitcoins(int bitcoins, int addBitcoins)
 {
-    bitcoins += int.Parse(currCommand[1]);
+    bitcoins += addBitcoins;
 
-    Console.WriteLine($"You found {int.Parse(currCommand[1])} bitcoins.");
+    Console.WriteLine($"You found {addBitcoins} bitcoins.");
 
     return bitcoins;
 }
 
-int AddHealth(string[] currCommand, int initialHealth)
+int AddHealth(int health, int addHealth)
 {
-    if (initialHealth + int.Parse(currCommand[1]) <= 100)
+    int currHealth = health;
+    health += addHealth;
+
+    if (health > 100)
     {
-        initialHealth += int.Parse(currCommand[1]);
+        addHealth = 100 - currHealth;
+        health = 100;
     }
 
-    Console.WriteLine($"You healed for {int.Parse(currCommand[1])} hp.");
-    Console.WriteLine($"Current health: {initialHealth} hp.");
+    Console.WriteLine($"You healed for {addHealth} hp.");
+    Console.WriteLine($"Current health: {health} hp.");
 
-    return initialHealth;
+    return health;
 }
-
-
-
+     
