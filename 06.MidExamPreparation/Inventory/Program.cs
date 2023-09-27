@@ -25,15 +25,14 @@ while ((command = Console.ReadLine()) != "Craft!")
             journal.Remove(item);
         }
     }
-    else if (currCommand.First() == "Combine")
+    else if (currCommand.First() == "Combine Items")
     {
-        string oldItem = currCommand[2];
-        string newItem = currCommand[3];
+        string[] items = currCommand[1].Split(":");
 
-        if (journal.Contains(oldItem))
+        if (journal.Contains(items[0]))
         {
-            int index = journal.IndexOf(oldItem);
-            journal.Insert(index + 1, newItem);
+            int index = journal.IndexOf(items[0]);
+            journal.Insert(index + 1, items[1]);
         }
     }
     else if (currCommand.First() == "Renew")
