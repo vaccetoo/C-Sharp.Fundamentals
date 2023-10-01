@@ -26,7 +26,7 @@
                     leftSum += array[j];
                 }
 
-                for (int k = i + 1; k < array.Count(); k++)
+                for (int k = i + 1; k < array.Length; k++)
                 {
                     if (k > array.Length - 1)
                     {
