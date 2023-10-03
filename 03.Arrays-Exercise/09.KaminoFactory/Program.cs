@@ -27,11 +27,11 @@ while ((command = Console.ReadLine()) != "Clone them!")
     arrayCnt++;
     currSum = currDnaArray.Sum();
 
-    for (int i = 0; i < currDnaArray.Length - 1; i++)
+    for (int i = 0; i < currDnaArray.Length; i++)
     {
         currSequence = 0;
 
-        for (int j = i + 1; j < currDnaArray.Length; j++)
+        for (int j = i + 1; j < currDnaArray.Length - 1; j++)
         {
             if (currDnaArray[i] == 1 && currDnaArray[j] == 1)
             {
