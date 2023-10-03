@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.MaxSequenceOfEqualElemen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.MagicSum", "08.MagicSum\08.MagicSum.csproj", "{B8B4F682-6F8C-4D68-8BA3-7F78FFFFD038}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.KaminoFactory", "09.KaminoFactory\09.KaminoFactory.csproj", "{F9269E9C-7EE1-437E-A6F9-ED370E26D92F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.KaminoFactory", "09.KaminoFactory\09.KaminoFactory.csproj", "{F9269E9C-7EE1-437E-A6F9-ED370E26D92F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.LadyBugs", "10.LadyBugs\10.LadyBugs.csproj", "{706331F6-DBD6-4BB6-9AAF-C8ED01C2E94A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{F9269E9C-7EE1-437E-A6F9-ED370E26D92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9269E9C-7EE1-437E-A6F9-ED370E26D92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9269E9C-7EE1-437E-A6F9-ED370E26D92F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{706331F6-DBD6-4BB6-9AAF-C8ED01C2E94A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{706331F6-DBD6-4BB6-9AAF-C8ED01C2E94A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{706331F6-DBD6-4BB6-9AAF-C8ED01C2E94A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{706331F6-DBD6-4BB6-9AAF-C8ED01C2E94A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
