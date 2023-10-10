@@ -12,7 +12,7 @@ for (int i = 0; i < field.Length; i++)
 {
     if (indexesWithLadyBug.Contains(i))
     {
-        field[i] = 1; 
+        field[i] = 1;
     }
     else
     {
@@ -26,24 +26,44 @@ while ((command = Console.ReadLine()) != "end")
 {
     string[] currCommand = command.Split();
 
-    int ladyBugIndex = int.Parse(currCommand[0]);
+    int ladyBugCurrIndex = int.Parse(currCommand[0]);
     string direction = currCommand[1];
     int flyLength = int.Parse(currCommand[2]);
 
-    if (ladyBugIndex < 0 || ladyBugIndex >= field.Length)
+    if (ladyBugCurrIndex < 0 || ladyBugCurrIndex >= field.Length || field[ladyBugCurrIndex] == 0)
     {
         continue;
     }
 
+    field[ladyBugCurrIndex] = 0;
+
     if (direction == "right")
     {
-        int startIndex = ladyBugIndex;
-        int endIndex = startIndex + flyLength;
+        int endIndex = ladyBugCurrIndex + flyLength;
+
+        while (endIndex >= 0 && endIndex < field.Length && field[endIndex] != 0)
+        {
+            endIndex += flyLength;
+        }
+
+        if (endIndex >= 0 && endIndex < field.Length)
+        {
+            field[endIndex] = 1;
+        }
     }
     else if (direction == "left")
     {
-        int startIndex = ladyBugIndex;
-        int endIndex = startIndex - flyLength;
+        int endIndex = ladyBugCurrIndex - flyLength;
+
+        while (endIndex >= 0 && endIndex < field.Length && field[endIndex] != 0)
+        {
+            endIndex -= flyLength;
+        }
+
+        if (endIndex >= 0 && endIndex < field.Length)
+        {
+            field[endIndex] = 1;
+        }
     }
 }
 
