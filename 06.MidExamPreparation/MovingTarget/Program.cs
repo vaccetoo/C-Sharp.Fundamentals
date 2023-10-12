@@ -32,9 +32,13 @@ Console.WriteLine(string.Join("|", targets));
 
 List<int> RemoveTargetsInRadius(List<int> targets, int currTarget, int radius)
 {
-    if (currTarget + radius < targets.Count && currTarget - radius >= 0)
+    int startIndex = currTarget - radius;
+    int endIndex = currTarget + radius;
+    int length = endIndex - startIndex + 1;
+
+    if (startIndex >= 0 && endIndex < targets.Count)
     {
-        targets.RemoveRange(currTarget - radius, (currTarget + radius) - (currTarget - radius) + 1);
+        targets.RemoveRange(startIndex, length);
 
         return targets;
     }
@@ -60,13 +64,16 @@ List<int> InsertTarget(List<int> targets, int currTarget, int value)
 
 List<int> ShootTheTarget(List<int> targets, int currTarget, int value)
 {
-    targets[currTarget] -= value;
-
-    if (targets[currTarget] <= 0)
+    if (currTarget >= 0 && currTarget < targets.Count)
     {
-        targets.RemoveAt(currTarget);
+        targets[currTarget] -= value;
 
-        return targets;
+        if (targets[currTarget] <= 0)
+        {
+            targets.RemoveAt(currTarget);
+
+            return targets;
+        }
     }
 
     return targets;
