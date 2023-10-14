@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShootForTheWin", "ShootForT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovingTarget", "MovingTarget\MovingTarget.csproj", "{3D1B6DA8-EAB2-424C-A448-56E44872476D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackFlag", "BlackFlag\BlackFlag.csproj", "{53659C7A-F03B-4786-906D-1EF9C6B2D4A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlackFlag", "BlackFlag\BlackFlag.csproj", "{53659C7A-F03B-4786-906D-1EF9C6B2D4A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreasureHunt", "TreasureHunt\TreasureHunt.csproj", "{8C76D6AD-B640-4D6E-8E90-EE9663499A25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{53659C7A-F03B-4786-906D-1EF9C6B2D4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53659C7A-F03B-4786-906D-1EF9C6B2D4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53659C7A-F03B-4786-906D-1EF9C6B2D4A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C76D6AD-B640-4D6E-8E90-EE9663499A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C76D6AD-B640-4D6E-8E90-EE9663499A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C76D6AD-B640-4D6E-8E90-EE9663499A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C76D6AD-B640-4D6E-8E90-EE9663499A25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
