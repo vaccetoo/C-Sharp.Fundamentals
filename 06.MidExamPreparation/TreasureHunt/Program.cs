@@ -7,37 +7,89 @@ string command = string.Empty;
 
 while ((command = Console.ReadLine()) != "Yohoho!")
 {
-    List<string> currCommand = command.Split().ToList();
+    string[] commandAsArray = command.Split().ToArray();
 
-    if (currCommand.First() == "Loot")
+    string currCommand = commandAsArray[0];
+
+    if (currCommand == "Loot")
     {
-        chest = InsertItemAtTheBegining(chest, currCommand);
+        chest = InsertItems(chest, commandAsArray);
     }
-    else if (currCommand.First() == "Drop")
+    else if (currCommand == "Drop")
     {
-        int currIndex = int.Parse(currCommand[1]);
+        int index = int.Parse(commandAsArray[1]);
 
-        chest = AddItemAtTheEnd(chest, currIndex);
+        chest = PlaceTheLootAtTheEnd(chest, index);
     }
-    else if (currCommand.First() == "Steal")
+    else if (currCommand == "Steal")
     {
-        int count = int.Parse(currCommand[1]);
+        int count = int.Parse(commandAsArray[1]);
 
-        chest = RemoveItems(chest, count);
+        chest = RemoveStolenItems(chest, count);
     }
 }
 
-List<string> RemoveItems(List<string> chest, int count)
+if (chest.Count <= 0)
 {
-    throw new NotImplementedException();
+    Console.WriteLine("Failed treasure hunt.");
+}
+else
+{
+    double sum = 0;
+
+    for (int i = 0; i < chest.Count; i++)
+    {
+        sum += chest[i].Length;
+    }
+
+    double averageProfit = sum / chest.Count;
+
+    Console.WriteLine($"Average treasure gain: {averageProfit:f2} pirate credits.");
 }
 
-List<string> AddItemAtTheEnd(List<string> chest, int currIndex)
+List<string> RemoveStolenItems(List<string> chest, int count)
 {
-    throw new NotImplementedException();
+    if (count >= chest.Count)
+    {
+        count = chest.Count;
+    }
+
+    List<string> stolenItems = new List<string>();
+
+    for (int i = chest.Count - count; i < chest.Count; i++)
+    {
+        stolenItems.Add(chest[i]);
+    }
+
+    chest.RemoveRange(chest.Count - count, count);
+
+    Console.WriteLine(string.Join(", ", stolenItems));
+
+    return chest;
 }
 
-List<string> InsertItemAtTheBegining(List<string> chest, List<string> currCommand)
+List<string> PlaceTheLootAtTheEnd(List<string> chest, int index)
 {
-    throw new NotImplementedException();
+    if (index >= 0 && index < chest.Count)
+    {
+        chest.Add(chest[index]);
+        chest.RemoveAt(index);
+    }
+
+    return chest;
+}
+
+List<string> InsertItems(List<string> chest, string[] commandAsArray)
+{
+    for (int i = 1; i < commandAsArray.Length; i++)
+    {
+        string item = commandAsArray[i];
+
+        if (!chest.Contains(item))
+        {
+            chest.Insert(0, item);
+        }
+    }
+
+    return chest;
 }
