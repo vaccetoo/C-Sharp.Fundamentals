@@ -57,19 +57,38 @@ while ((command = Console.ReadLine()) != "Retire")
     }
 }
 
+if (command == "Retire")
+{
+    int pirateShipSum = 0;
+    int warshipSum = 0;
+
+    for (int i = 0; i < pirateShip.Count; i++)
+    {
+        pirateShipSum += pirateShip[i];
+    }
+
+    for (int i = 0; i < warship.Count; i++)
+    {
+        warshipSum += warship[i];
+    }
+
+    Console.WriteLine($"Pirate ship status: {pirateShipSum}");
+    Console.WriteLine($"Warship status: {warshipSum}");
+}
+
 void PrintSectionsForRepair(List<int> pirateShip)
 {
     int count = 0;
 
     for (int i = 0; i < pirateShip.Count; i++)
     {
-        if (pirateShip[i] <= (0.2 * maxHealth))
+        if ((double)pirateShip[i] < (0.2 * maxHealth))
         {
             count++;
         }
     }
 
-    Console.WriteLine(;
+    Console.WriteLine($"{count} sections need repair.");
 }
 
 List<int> AddHealth(List<int> pirateShip, int currIndex, int addHealth)
@@ -81,13 +100,13 @@ List<int> AddHealth(List<int> pirateShip, int currIndex, int addHealth)
 
     if (pirateShip[currIndex] + addHealth > maxHealth)
     {
-        pirateShip[currIndex] = maxHealth;
+        pirateShip[currIndex] = (int)maxHealth;
     }
     else
     {
         pirateShip[currIndex] += addHealth;
     }
-    
+
     return pirateShip;
 }
 
@@ -125,6 +144,6 @@ List<int> SubtractDamage(List<int> warship, int currIndex, int currDmg)
     {
         Console.WriteLine("You won! The enemy ship has sunken.");
     }
-        
+
     return warship;
 }
