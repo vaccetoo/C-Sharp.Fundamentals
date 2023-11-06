@@ -1,19 +1,38 @@
 ﻿
-string[] article = Console.ReadLine()
-    .Split(", ", StringSplitOptions.RemoveEmptyEntries);
+// input = "{title}, {content}, {author}"
 
-int numberOfCommands = int.Parse(Console.ReadLine());
+string[] input = Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries);
 
-for (int i = 0; i < numberOfCommands; i++)
+string title = input[0];
+string content = input[1];
+string author = input[2];
+
+Article article = new Article(title, content, author);
+
+int nunberOfCommands = int.Parse(Console.ReadLine());
+
+for (int i = 0; i < nunberOfCommands; i++)
 {
-    string title = article[0];
-    string content = article[1];
-    string author = article[2];
+    string[] commandArray = Console.ReadLine().Split(": ", StringSplitOptions.RemoveEmptyEntries);
 
-    Article currArticle = new Article(title, content, author);  
+    string command = commandArray[0];
+    string newValue = commandArray[1];
 
-
+    if (command == "Edit")
+    {
+        article.Edit(newValue);
+    }
+    else if (command == "ChangeAuthor")
+    {
+        article.ChangeAuthor(newValue);
+    }
+    else if (command == "Rename")
+    {
+        article.Rename(newValue);
+    }
 }
+
+Console.WriteLine(article);
 
 public class Article
 {
@@ -43,5 +62,10 @@ public class Article
     public void Rename(string title)
     {
         Title = title;
+    }
+
+    public override string ToString()
+    {
+        return $"{Title} - {Content}: {Author}";
     }
 }
