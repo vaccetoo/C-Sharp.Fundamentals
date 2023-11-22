@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.AdAstra", "02.AdAstra\02
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.ThePianist", "03.ThePianist\03.ThePianist.csproj", "{31757292-15C7-41A5-8070-F4388EE0777A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.WorldTour", "04.WorldTour\04.WorldTour.csproj", "{D3E7E23D-1314-42CD-BA8F-D89DE6D6C2FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.WorldTour", "04.WorldTour\04.WorldTour.csproj", "{D3E7E23D-1314-42CD-BA8F-D89DE6D6C2FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.DestinationMapper", "05.DestinationMapper\05.DestinationMapper.csproj", "{AEBC5CCF-C574-4D92-9061-5C08153762DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.DestinationMapper", "05.DestinationMapper\05.DestinationMapper.csproj", "{AEBC5CCF-C574-4D92-9061-5C08153762DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.PlantDiscovery", "06.PlantDiscovery\06.PlantDiscovery.csproj", "{356A316A-CEFE-49D9-B225-F2AC4EADD049}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{AEBC5CCF-C574-4D92-9061-5C08153762DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEBC5CCF-C574-4D92-9061-5C08153762DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEBC5CCF-C574-4D92-9061-5C08153762DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{356A316A-CEFE-49D9-B225-F2AC4EADD049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356A316A-CEFE-49D9-B225-F2AC4EADD049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356A316A-CEFE-49D9-B225-F2AC4EADD049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356A316A-CEFE-49D9-B225-F2AC4EADD049}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
