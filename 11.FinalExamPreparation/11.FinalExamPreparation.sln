@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.WorldTour", "04.WorldTou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.DestinationMapper", "05.DestinationMapper\05.DestinationMapper.csproj", "{AEBC5CCF-C574-4D92-9061-5C08153762DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.PlantDiscovery", "06.PlantDiscovery\06.PlantDiscovery.csproj", "{356A316A-CEFE-49D9-B225-F2AC4EADD049}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.PlantDiscovery", "06.PlantDiscovery\06.PlantDiscovery.csproj", "{356A316A-CEFE-49D9-B225-F2AC4EADD049}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.SecretChat", "07.SecretChat\07.SecretChat.csproj", "{D35343F1-ECEF-4BC8-9456-6C74782C9B51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{356A316A-CEFE-49D9-B225-F2AC4EADD049}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{356A316A-CEFE-49D9-B225-F2AC4EADD049}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{356A316A-CEFE-49D9-B225-F2AC4EADD049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D35343F1-ECEF-4BC8-9456-6C74782C9B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D35343F1-ECEF-4BC8-9456-6C74782C9B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D35343F1-ECEF-4BC8-9456-6C74782C9B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D35343F1-ECEF-4BC8-9456-6C74782C9B51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
