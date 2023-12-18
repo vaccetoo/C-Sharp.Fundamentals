@@ -1,2 +1,2 @@
-# C-Sharp.Fundamentals
+# CSharp.Fundamentals
 Course exercises !
